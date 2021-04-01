@@ -2,14 +2,14 @@ BEGIN;
 
 TRUNCATE
   whattoeat_restaurants,
-  restaurant_detail
+  favorites
   RESTART IDENTITY CASCADE;
 
 INSERT INTO whattoeat_restaurants (alias, name, image_url, is_closed, url, review_count, categories, rating, transactions, price, location, display_phone, distance)
 VALUES
 ('molinari-delicatessen-san-francisco',
             'Molinari Delicatessen',
-            'https://s3-media3.fl.yelpcdn.com/bphoto/B5vUs6hU1W6UcBQL52v2GQ/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/fwcKOndKjsvCOQJush9dXQ/o.jpg',
              false,
             'https://www.yelp.com/biz/molinari-delicatessen-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             1154,
@@ -22,8 +22,8 @@ VALUES
             1453.998141679007),
 
 ('deli-board-san-francisco',
-            'Deli Board',
-            'https://s3-media3.fl.yelpcdn.com/bphoto/m5dL_mNk9rjSJ5jQu17hVw/o.jpg',
+            'Q Board',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/fBtAMu25uFqRvXbGdJ1qlQ/o.jpg',
             false,
            'https://www.yelp.com/biz/deli-board-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             1413,
@@ -37,7 +37,7 @@ VALUES
             (
 'wise-sons-san-francisco-6',
             'Wise Sons',
-            'https://s3-media2.fl.yelpcdn.com/bphoto/O6Apf39llWL3sfye-PseNQ/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/O2lN0hLko9u3KRACu3qWtg/o.jpg',
             false,
             'https://www.yelp.com/biz/wise-sons-san-francisco-6?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             302,
@@ -52,11 +52,11 @@ VALUES
             (
 'sammys-on-2nd-san-francisco',
             'Sammy’s on 2nd',
-            'https://s3-media2.fl.yelpcdn.com/bphoto/vi6h1mfMkRwIkyj5VE66FQ/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/cBM_KEb6WWjkXqVBuzc1bA/o.jpg',
             false,
             'https://www.yelp.com/biz/sammys-on-2nd-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             207,
-            'Sandwiches',
+            'Bar',
             4.0,
             'delivery',
             '$',
@@ -67,7 +67,7 @@ VALUES
             (
 'limoncello-san-francisco',
             'Limoncello',
-            'https://s3-media2.fl.yelpcdn.com/bphoto/GNMz7gMIMgmBZr4WAYUQsw/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/2avChXB3tKjklFhY1Npf0A/o.jpg',
             false,
             'https://www.yelp.com/biz/limoncello-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             1124,
@@ -82,7 +82,7 @@ VALUES
             (
  'sutter-st-cafe-san-francisco',
             'Sutter St. Cafe',
-            'https://s3-media1.fl.yelpcdn.com/bphoto/4ANprW476nocK3E8UT9N1g/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/tTN2z392sq953MlO3ZBrJQ/o.jpg',
             false,
             'https://www.yelp.com/biz/sutter-st-cafe-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             208,
@@ -97,7 +97,7 @@ VALUES
             (
 '5th-avenue-deli-and-market-san-francisco',
             '5th Avenue Deli & Market',
-            'https://s3-media4.fl.yelpcdn.com/bphoto/dD3LeuzL_TQSUdcHKIBPHw/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/YfutsJ-CP9W3qY7GgJNQxw/o.jpg',
             false,
             'https://www.yelp.com/biz/5th-avenue-deli-and-market-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             57,
@@ -112,7 +112,7 @@ VALUES
             (
 'sf-deli-and-wine-san-francisco-3',
             'SF Deli & Wine',
-            'https://s3-media4.fl.yelpcdn.com/bphoto/JZyTwN-b1HEGQsJmnqjybQ/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/ODXHcG5daF6rqGTIs6pKtQ/o.jpg',
             false,
             'https://www.yelp.com/biz/sf-deli-and-wine-san-francisco-3?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             29,
@@ -127,7 +127,7 @@ VALUES
             (
 'liquor-and-deli-on-union-square-san-francisco',
             'Liquor & Deli On Union Square',
-            'https://s3-media4.fl.yelpcdn.com/bphoto/tro4pbb5r_aMt7dmmti_4g/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/p1OvWrHoKhojU_i84A9K-g/o.jpg',
             false,
             'https://www.yelp.com/biz/liquor-and-deli-on-union-square-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             37,
@@ -142,7 +142,7 @@ VALUES
             (
 'the-boys-deli-san-francisco',
             'The Boys’ Deli',
-            'https://s3-media3.fl.yelpcdn.com/bphoto/qXbjX3opOgmgN_5NsCb9Cw/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/JXJTaO3KJXFEr8SWFSf6cA/o.jpg',
             false,
             'https://www.yelp.com/biz/the-boys-deli-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             336,
@@ -157,7 +157,7 @@ VALUES
             (
 'palermo-ii-delicatessen-san-francisco',
             'Palermo II Delicatessen',
-            'https://s3-media4.fl.yelpcdn.com/bphoto/47DciaUfzII175Wj4Stm_w/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/PCETQIPGIHTOpPwNIYqoCg/o.jpg',
             false,
             'https://www.yelp.com/biz/palermo-ii-delicatessen-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             78,
@@ -172,7 +172,7 @@ VALUES
             (
 'working-girls-cafe-san-francisco-3',
             'Working Girls’ Cafe',
-            'https://s3-media3.fl.yelpcdn.com/bphoto/LLI6Afy68RS_uqezhBNdBQ/o.jpg',
+            'https://s3-media0.fl.yelpcdn.com/bphoto/X7MFBtLU-IPYlO-DXZQAzA/o.jpg',
             false,
             'https://www.yelp.com/biz/working-girls-cafe-san-francisco-3?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             418,

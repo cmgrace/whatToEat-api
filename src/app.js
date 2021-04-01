@@ -4,6 +4,9 @@ const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
 const { NODE_ENV } = require("./config");
+const RestaurantService = require("./restaurant/restaurant-service");
+
+const restaurantRouter = require("./restaurant/restaurant-router");
 
 const app = express();
 
@@ -13,9 +16,7 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
+app.use("/api", restaurantRouter);
 
 app.use(function errorHandler(error, req, res, next) {
   let response;
