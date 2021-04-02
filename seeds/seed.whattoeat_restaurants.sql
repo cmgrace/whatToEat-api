@@ -1,6 +1,7 @@
 BEGIN;
 
 TRUNCATE
+dishes,
   whattoeat_restaurants,
   favorites
   RESTART IDENTITY CASCADE;
@@ -96,7 +97,7 @@ VALUES
             ),
             (
 '5th-avenue-deli-and-market-san-francisco',
-            '5th Avenue Deli & Market',
+            '5th Avenue Deli',
             'https://s3-media0.fl.yelpcdn.com/bphoto/YfutsJ-CP9W3qY7GgJNQxw/o.jpg',
             false,
             'https://www.yelp.com/biz/5th-avenue-deli-and-market-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
@@ -126,7 +127,7 @@ VALUES
             ),
             (
 'liquor-and-deli-on-union-square-san-francisco',
-            'Liquor & Deli On Union Square',
+            'Deli On Union Square',
             'https://s3-media0.fl.yelpcdn.com/bphoto/p1OvWrHoKhojU_i84A9K-g/o.jpg',
             false,
             'https://www.yelp.com/biz/liquor-and-deli-on-union-square-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
@@ -176,7 +177,7 @@ VALUES
             false,
             'https://www.yelp.com/biz/working-girls-cafe-san-francisco-3?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw',
             418,
-            'Sandwiches',
+            'Chinese',
             4.0,
             'pickup, delivery',
             '$$',
@@ -184,5 +185,79 @@ VALUES
             '(415) 537-1170',
             28.22725630514869
             );
+
+INSERT INTO dishes (restaurant_id, name, dish_price, dish_img, dish_desc)
+VALUES
+(1, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/KfzQF5C1C8Ttha76fhmLkg/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(1, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/ZHhIwhi6YVI2jcWSP5r5MA/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(1, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/paUSQYFeSQF46svxRXbKVg/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(1, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/1qBgLajMkX17YodD6UXrMw/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(1, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/t4u_23eLUsW-HghPF_lpUw/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(2, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/zcbgJu1ae7OxKeqIeYCS6A/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(2, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/SZs_2v4pi0QJp2dFzDbHvw/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(2, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/P4NLra155XveoxSXRKSKUw/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(2, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/tNnD9hISUFA-LtWdz_4tRg/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(2, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/Y9F4TgFEJ8FrUeKI_vX6og/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(3, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/tI3VBgg34WTx-a-6CsGTYg/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(3, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/0R5BY_XG1FFGV8OVmmp5iw/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(3, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/SUhhpWYIn-j856SVCKmp8g/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(3, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/GasEsAKJpEFa3-m60IkMrg/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(3, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/eKQ9MKE1kcxlO1votoNF4g/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(4, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/-EtLhpzPRnoKYzWJNt3U5w/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(4, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/2uVuafFO-X34KCmxS2AhBQ/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(4, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/gFgfkfQ7YfEzA2XpeFbXaw/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(4, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/1mW6uhyOKem-s51T7hwWSw/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(4, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/1Bo9h3QI-OxSEuScqXPdkA/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(5, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/nhdVgTZ6_ToZAbe6REkY8A/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(5, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/dj5dVhifb90LiRjeHtya8g/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(5, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/TQpq45ON04EzFYiTEcATtg/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(5, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/V-zraPJ5jbo20AFMPOimbw/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(5, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/IgNOWEzUK0P_fvRlHCN3lg/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(6, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/2-ivAOn057RMimLAvo9ulA/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(6, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/2Ev9mUdiIZb6gEzI9XrYZQ/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(6, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/o6Eicrnp4M9jNpWtmdzmVw/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(6, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/G2hC9beVdYikSIDZEu5oJw/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(6, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/IL2zZKwltn2fUnIbdfS4Fg/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(7, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/gNH1LAIwNPB-n2Wm1b2HUA/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(7, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/ZvbiGMLQzTEp_uphUfqhTw/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(7, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/4lsgrezwELDUQW3iG3iOIw/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(7, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/o2WtS5V3mZTznCG9EuEuUQ/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(7, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/MG3ZkJjEgMKXsSKGeyUe7Q/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(8, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/tTN2z392sq953MlO3ZBrJQ/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(8, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/4DBmKZlDm4RdGOfEWKD1_A/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(8, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/0NtCgvFA3M2rEsBHhB-qpA/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(8, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/qd0XfVZ4MF6I-Qt_xHXjKQ/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(8, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/MPmMpEMGpNJtebOFh0yVug/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(9, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/Ina0erE_N8tgHDQoPdsNFA/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(9, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/-vPyXUk2A765JOBrS8BMhQ/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(9, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/inNV88lmxTxRXXawhSZYrQ/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(9, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/KNsNyr-mlIvYVV-b3j22hw/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(9, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/Ldsnhh7iqSkvwPMV5onwnA/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(10, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/H7paQIR--I3fxzmVGWVNsw/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(10, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/gNxl4mX11IClsSkcX4_p_w/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(10, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/dvAbt1FwDvbKsQBCcjqu3w/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(10, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/UVXYfKrlyGYlpnKgYzw6kQ/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(10, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/pejCDNkYBfHIeif6RRFsfQ/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(11, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/q3r5mXyhixAQoHHwiQeWkg/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(11, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/4Ph21iQI_aZ3M083KdriXA/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(11, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/o_oKZ7dE0Pn4caJWdAfz-w/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(11, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/VgK0NdZLJ9rcIALF3uDGfw/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(11, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/wBOLR0lXmLHg_-45ZLCAVg/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce'),
+
+(12, 'A La Francese', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/nh_Z6KmzX9djVqMeuogOwg/o.jpg', 'Sautéed in white wine and lemon sauce with mushrooms'),
+(12, 'Parmigiana', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/3kbujXVj2txbdIcpy-N4Aw/o.jpg', 'Pan fried and topped with marinara sauce and mozzarella cheese'),
+(12, 'Alfredo', '12.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/m5ggtLCMIh4zpuhtMd9KdA/o.jpg', 'Parmesan cream sauce with a hint of garlic served with tender chicken breast'),
+(12, 'Marsala', '13.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/4B7Xmgh0f0o5VxudBWFKRQ/o.jpg', 'With mushrooms, shallots, & sage in marsala wine sauce'),
+(12, 'Chicken Carbonara', '14.95', 'https://s3-media0.fl.yelpcdn.com/bphoto/RLpCNFXZE6fOk9T8KNI6uw/o.jpg', 'With wild mushrooms, onion, pepper and Italian herbs in a cherry wine sauce');
 
 COMMIT;

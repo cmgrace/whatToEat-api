@@ -32,4 +32,12 @@ restaurantRouter.route("/favorites/items/:fav_id").delete((req, res, next) => {
     .catch(next);
 });
 
+restaurantRouter.route("/dishes").get((req, res, next) => {
+  RestaurantService.getAllDishes(req.app.get("db"))
+    .then((restaurants) => {
+      res.json(restaurants);
+    })
+    .catch(next);
+});
+
 module.exports = restaurantRouter;

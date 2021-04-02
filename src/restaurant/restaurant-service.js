@@ -2,6 +2,9 @@ const RestaurantService = {
   getAllRestaurants(knex) {
     return knex.select("*").from("whattoeat_restaurants");
   },
+  getAllDishes(knex) {
+    return knex.select("*").from("dishes");
+  },
   insertItemToFavorites(knex, newItemAdded) {
     return knex.insert(newItemAdded).into("favorites").returning("*");
     //   .then((rows) => rows[0]);
@@ -9,6 +12,7 @@ const RestaurantService = {
   getAllRestaurantsInFavorites(knex) {
     return knex
       .select(
+        "id",
         "fav_id",
         "image_url",
         "name",
