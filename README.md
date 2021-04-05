@@ -1,26 +1,90 @@
-# Express Boilerplate!
+# What to eat-server
 
-This is a boilerplate project used for starting new projects!
+Live Deployment
 
-## Set up
+[https://what-to-eat-beta.vercel.app/](https://what-to-eat-beta.vercel.app/)
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Server Deployment
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+[https://secret-earth-69641.herokuapp.com/api](https://secret-earth-69641.herokuapp.com/api)
 
-## Scripts
+## API Documentation
 
-Start the application `npm start`
+### What to eat Endpoints
 
-Start nodemon for the application `npm run dev`
+    GET /api/restaurants: Return an list of restaurants stored in database.
 
-Run the tests `npm test`
+```
+{
+      id: 1,
+      alias: "molinari-delicatessen-san-francisco",
+      name: "Molinari Delicatessen",
+      image_url:
+        "https://s3-media3.fl.yelpcdn.com/bphoto/B5vUs6hU1W6UcBQL52v2GQ/o.jpg",
+      is_closed: false,
+      url:
+        "https://www.yelp.com/biz/molinari-delicatessen-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw",
+      review_count: 1154,
+      categories: "Delis",
+      rating: 4.5,
+      transactions: "pickup,delivery",
+      price: "$$",
+      location: "373 Columbus Ave, San Francisco, CA 94133",
+      display_phone: "(415) 421-2337",
+      distance: "1453.998141679007",
+    }
+```
 
-## Deploying
+    GET /favorites/items: Return an list of item in the favorites.
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
+```
+{
+      id: 1,
+      fav_id: 1,
+      name: "Molinari Delicatessen",
+      image_url:
+        "https://s3-media3.fl.yelpcdn.com/bphoto/B5vUs6hU1W6UcBQL52v2GQ/o.jpg",
+      url:
+        "https://www.yelp.com/biz/molinari-delicatessen-san-francisco?adjust_creative=5Brfn2GCNjfiuMqdnkxwXw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=5Brfn2GCNjfiuMqdnkxwXw",
+      review_count: 1154,
+      categories: "Delis",
+      rating: 4.5,
+      transactions: "pickup,delivery",
+      price: "$$",
+      location: "373 Columbus Ave, San Francisco, CA 94133",
+      display_phone: "(415) 421-2337",
+      distance: "1453.998141679007",
+    },
+```
+
+    POST /favorites: post an item to the cart table
+
+```
+{ fav_id: 1, restaurant_id: 1 }
+```
+
+    DELETE /favorites/items/:fav_id: allow user to remove the item in the favorites
+
+## Technology used
+
+### Frontend
+
+- ReactJS
+- React Router
+- React Context
+- React Hooks
+- HTML
+- CSS
+- Webpack
+- Jest
+- Deployed at Vercel
+
+### Backend
+
+- RESTful API
+- Node & Express
+- PostgresSQL
+- Knex
+- Supertest
+- Mocha & Chai
+- Deployed Heroku
